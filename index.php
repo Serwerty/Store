@@ -19,6 +19,7 @@
         <div class = "footer">
             <?php
             include ("footer.php");
+            echo "test";
             ?>
         </div>
     </body>

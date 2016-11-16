@@ -12,7 +12,7 @@
 				header('Location: '.'index.php', true, $permanent ? 301 : 302);
 				exit();
 			}
-            include("connect.php");
+            include("includes/connect.php");
 
             function startSessionForUser($userId, $username, $email) {
                $_SESSION['valid'] = true;

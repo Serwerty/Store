@@ -10,7 +10,7 @@
             <?php
             ob_start();
             session_start();
-            include("header.php");
+            include("includes/header.php");
             ?>
         </div>
         <div class = "content">
@@ -18,7 +18,7 @@
         </div>
         <div class = "footer">
             <?php
-            include ("footer.php");
+            include ("includes/footer.php");
             ?>
         </div>
     </body>

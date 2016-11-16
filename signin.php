@@ -1,17 +1,19 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+        <LINK href="css/main.css" rel="stylesheet" type="text/css">
 		<title>Sign In</title>
 	</head>
 	<body>
-         <div class = "container">
-         <?php
+         <div class="header">
+            <?php
             ob_start();
             session_start();
-            if (isset($_SESSION['user_id'])) {
-				header('Location: '.'index.php', true, $permanent ? 301 : 302);
-				exit();
-			}
+            include("includes/header.php");
+            ?>
+        </div>
+         <div class = "content">
+         <?php
             include("includes/connect.php");
 
             function startSessionForUser($userId, $username, $email) {
@@ -21,6 +23,7 @@
                $_SESSION['user_id'] = $userId;
                $_SESSION['username'] = $username;
                $_SESSION['email'] = $email;
+               $_SESSION['loggedout'] = false;
             }
 
             function signIn($conn, $email, $password) {
@@ -49,16 +52,11 @@
                }
             }
          ?>
-      </div>
-      
-      <div class = "container">
          <form action="signin.php" method="post">
-            <fieldset>
                <p><input type="email" name="email" size="40" maxlength="40" placeholder="Email" /></p>
                <p><input type="password" name="password" size="40" maxlength="40" placeholder="Password" /></p>
                <p><input type="submit" name= "signin" value="Sign In" /></p>
                <a href="signup.php">Don't have an account? Sign Up</a>
-            </fieldset>
          </form>
       </div> 
     </body>

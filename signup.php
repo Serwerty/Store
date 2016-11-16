@@ -1,13 +1,19 @@
 <html>
     <head>
 		<meta charset="utf-8">
+        <LINK href="css/main.css" rel="stylesheet" type="text/css">
 		<title>Sign Up</title>
 	</head>
 	<body>
-        <div class = "container">
+         <div class="header">
             <?php
-                ob_start();
-                session_start();
+            ob_start();
+            session_start();
+            include("includes/header.php");
+            ?>
+        </div>
+        <div class = "content">
+            <?php
                 if (isset($_SESSION['user_id'])) {
 				    header('Location: '.'index.php', true, $permanent ? 301 : 302);
 				    exit();
@@ -69,17 +75,13 @@
                  }
               }
            ?>
-        </div>
-        <div class = "container">
          <form action="signup.php" method="post">
-            <fieldset>
                <p><input type="text" name="username" size="40" maxlength="40" placeholder="Username" /></p>
                <p><input type="email" name="email" size="40" maxlength="40" placeholder="Email" /></p>
                <p><input type="password" name="password" size="40" maxlength="40" placeholder="Password" /></p>
                <p><input type="password" name="confirm_password" size="40" maxlength="40" placeholder="Confirm password" /></p>
                <p><input type="submit" name="sign_up" value="Sign Up" /></p>
                <a href="signin.php">Already have an account? Sign In</a>
-            </fieldset>
          </form>
       </div> 
     </body>

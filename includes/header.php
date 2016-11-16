@@ -17,9 +17,10 @@ foreach ($pages as $key => $value)
     }
     else
     {
-        echo "<li><a class=\"selected\">".$value."</a></li>";   
+        echo "<li class=\"selected\"><a>".$value."</a></li>";   
     }
 }
+
 
  if (isset($_SESSION['user_id'])) 
     {

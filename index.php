@@ -48,6 +48,8 @@
             
             function GetTable($conn,$page)
             {
+                $productsOnPage = array();
+                $i = 0;
                 global $ITEMS_PER_PAGE;
                 $page =  @$_GET["page"];    
                 if ($page<=0)
@@ -58,20 +60,24 @@
                     echo '<table class = "products" width="100%" >';
                         foreach ($conn->query($sql) as $row) 
                         {
-
-                           echo '<tr>
-                                <td class = "table_image"><img src = "'.$row['image_path'].'"/></td>
-                                <td>'.$row['name'].'</td>
-                                <td>'.$row['price'].'</td>
-                                <td class = "table_image"><img width="40" height="40" align ="middle" 
-                                class = "table_button"
-                                src = "images/plus_button.png"/></td>
-                              </tr>';
-
+                            $productsOnPage[$i] = $row['id'];
+                            echo '<tr>
+                                    <td class = "table_image"><img src = "'.$row['image_path'].'"/></td>
+                                    <td>'.$row['name'].'</td>
+                                    <td>'.$row['price'].'</td>
+                                    <td class = "table_input"><input type="number" name="name" size="60" min="0" max="100" title="Title" /></td>
+                                    <td class = "table_image"><a href="cart.php"><img width="40" height="40" align ="middle" 
+                                        class = "table_button"
+                                        src = "images/plus_button.png"/></a></td>
+                                </tr>';
+                                $i++;
                         }
                     echo '</table>';
             }
-				
+            function test()
+            {
+                echo "asdf";
+            }
             ?>
         </div>
         <div class = "footer">

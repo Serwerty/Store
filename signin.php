@@ -22,8 +22,7 @@
                $_SESSION['expire'] = $_SESSION['start'] + (1800);
                $_SESSION['user_id'] = $userId;
                $_SESSION['username'] = $username;
-               $_SESSION['email'] = $email;
-               $_SESSION['loggedout'] = false;
+               $_SESSION['email'] = $email; 
             }
 
             function signIn($conn, $email, $password) {

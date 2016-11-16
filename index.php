@@ -14,7 +14,9 @@
             ?>
         </div>
         <div class = "content">
+            <?php
             
+            ?>
         </div>
         <div class = "footer">
             <?php

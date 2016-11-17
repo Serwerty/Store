@@ -11,7 +11,7 @@
     unset($_SESSION["user_id"]);
     unset($_SESSION["username"]);
     unset($_SESSION["email"]);
-
+    include('../utility/unSetCart.php');
     header('Location: ../signin.php', true, $permanent ? 301 : 302);
     exit();
  ?>

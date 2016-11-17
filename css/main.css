@@ -19,13 +19,13 @@ body {
 .user_container
 {
    text-align: right;
-   padding-left: 570px;
+   padding-left: 540px;
    color: #077c22;
 }
 .user_container:hover
 {
    text-align: right;
-   padding-left: 570px;
+   padding-left: 540px;
    background-color: #43b05c;
    color: #077c22;
 }
@@ -113,4 +113,17 @@ table td
     width: 80px;
     border:1px solid #ccc; 
     border-width:1px 1px 0 0; 
+}
+.cart
+{
+    text-align: center
+    width: 80px;
+    display: inline-block;    
+    color: #aaa;
+    background-color: #43b05c;
+    line-height: 60px;
+    padding: 0 24px;
+	text-decoration: none;
+    transition: all 0.2s;
+    list-style-type: none;
 }

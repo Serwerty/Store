@@ -14,7 +14,9 @@
             ?>
         </div>
         <div class = "content">
-            
+            <?php
+                echo  $_SESSION['cart'];
+            ?>
         </div>
         <div class = "footer">
             <?php

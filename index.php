@@ -48,7 +48,7 @@
             
             function GetTable($conn,$page)
             {
-                $productsOnPage = array();
+               // $productsOnPage = array();
                 $i = 0;
                 global $ITEMS_PER_PAGE;
                 $page =  @$_GET["page"];    
@@ -60,7 +60,7 @@
                     echo '<table class = "products" width="100%" >';
                         foreach ($conn->query($sql) as $row) 
                         {
-                            $productsOnPage[$i] = $row['id'];
+                           // $productsOnPage[$i] = $row['id'];
                             echo '<tr>
                                     <td class = "table_image"><img src = "'.$row['image_path'].'"/></td>
                                     <td>'.$row['name'].'</td>
@@ -77,10 +77,7 @@
                         }
                     echo '</table>';
             }
-            function test()
-            {
-                echo "asdf";
-            }
+            
             ?>
         </div>
         <div class = "footer">

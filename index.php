@@ -68,7 +68,7 @@
                             echo '<form action="utility/tableHandler.php" method="post">
                                     <td class = "table_input"><input type="number" name="count" size="60" min="0" max="100" title="Title" /></td>
                                     <td class = "table_image">
-                                    <input type="image" name="submit" src="images/plus_button.png" border="0" alt="Submit" width="40" height="40" align ="middle" value="'.$row['id'].'"/>
+                                    <input class= "table_button" type="image" name="submit" src="images/plus_button.png" border="0" alt="Submit" width="40" height="40" align ="middle" value="'.$row['id'].'"/>
                                    </td>';
                             echo '</form>
                                 </tr>';

@@ -17,6 +17,7 @@ CREATE TABLE Juices(
     name VARCHAR(80) NOT NULL,
 	price  NUMERIC(15,2) NOT NULL,
     manufacturer_id INTEGER NOT NULL,
+    image_path VARCHAR(120)
     PRIMARY KEY(id),
 	FOREIGN KEY (manufacturer_id) REFERENCES Manufacturers(id)
 );

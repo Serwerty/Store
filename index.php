@@ -42,8 +42,8 @@
                 $stmt->execute(); 
                 $maxPage = $stmt->fetch()['COUNT(*)'] / $ITEMS_PER_PAGE;
                 
-                echo '<div class = "page_selector"><p>Page '.$page.'of '.$maxPage.'</p></div>';
-                
+                include ('utility/pageSelector.php');
+                selectPage($page,$maxPage);
             }
             
             function GetTable($conn,$page)

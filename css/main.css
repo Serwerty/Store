@@ -108,10 +108,44 @@ table td
     display:block;
     margin:auto;
 }
-.page_selector p
+.page_selector
 {
-    text-align: center;
-    line-height: 30px;
+    display:table;
+    width:100%;
+
+}
+.page_selector_left
+{
+    display: inline-block;    
+    float:left;
+    text-align: left;
+    width: 120px;
+    padding: 5% 0;  
+}
+.page_selector_left img
+{
+    margin-left: 10px;
+    margin-right: 50px;
+}
+.page_selector_center
+{
+    height: 100%;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+}
+.page_selector_right
+{
+    display: inline-block;
+    text-align: right;
+    float:right;
+    width: 120px;
+    padding: 5% 0;  
+}
+.page_selector_right img
+{ 
+    margin-left: 50px;
+    margin-right: 10px;
 }
 .table_input
 {

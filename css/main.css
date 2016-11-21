@@ -48,6 +48,10 @@ menu li
     list-style-type: none;
     font-size: 16pt;
 }
+a
+{
+  text-decoration: none;  
+}
 menu li:hover
 {
     display: inline-block;    
@@ -60,9 +64,11 @@ menu li:hover
     list-style-type: none;
 }
 
-menu li > a:hover 
+
+
+menu li:hover  a
 {
-  color: #ddd;  
+   color: #ddd;  
 }
 .selected
 {

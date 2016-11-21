@@ -41,7 +41,7 @@
                                     <td>'.$row['name'].'</td>
                                     <td>'.$row['price'].'</td>
                                     <td>'.$_SESSION['productID'.$row['id']].'</td>
-                                    <td>'.$row['price']*$_SESSION['productID'.$row['id']].'</td>';
+                                    <td>'.$row['price'] * $_SESSION['productID'.$row['id']].'</td>';
                             echo '<form action="utility/tableHandler.php" method="post">';
                             echo '<td class = "table_input"><input class= "table_button" type="image" name="submit_plus" src="images/plus_button.png" border="0" alt="Submit" width="40"
                             height="40" align ="middle" value="'.$row['id'].'"</td>';
@@ -52,6 +52,10 @@
                       }
                     }
                     echo '</table>';
+                    echo '<div>';
+                    
+                    echo '</div>';
+                    
                  }
                 catch(PDOException $error)
                 {

@@ -33,7 +33,7 @@
             {
                 global $ITEMS_PER_PAGE;
                 $page =  @$_GET["page"];    
-                if ($page<=0)
+                if ($page <= 0)
                     $page = 1;
                 
                 GetTable($conn, $page);
@@ -51,10 +51,10 @@
                 $i = 0;
                 global $ITEMS_PER_PAGE;
                 $page =  @$_GET["page"];    
-                if ($page<=0)
+                if ($page <= 0)
                     $page = 1;
                 
-                    $sql = "SELECT * FROM juices LIMIT ".($page-1)*$ITEMS_PER_PAGE.",".$page*$ITEMS_PER_PAGE.";";
+                    $sql = "SELECT * FROM juices LIMIT ".($page-1) * $ITEMS_PER_PAGE.",".$page * $ITEMS_PER_PAGE.";";
                 
                     echo '<table class = "products" width="100%" >';
                         foreach ($conn->query($sql) as $row) 

@@ -63,9 +63,6 @@ menu li:hover
     transition: all 0.2s;
     list-style-type: none;
 }
-
-
-
 menu li:hover  a
 {
    color: #ddd;  
@@ -77,10 +74,13 @@ menu li:hover  a
 	line-height: 60px;
 	text-decoration: none;
 }
+
+
 .content
 {
     min-height: 500px;
     border: 1px solid black;
+    border-radius: 4px;
 }
 form
 {
@@ -90,18 +90,16 @@ form
 .products
 { 
     border-bottom: 1px solid black;
-    padding-bottom: 5px;
 }
 .table_image
 {
     width: 128px;
     border:1px solid #ccc; 
-    border-width:1px 1px 0 0; 
 }
 table td
 {
     border:1px solid #ccc; 
-    border-width:1px 1px 0 0;
+    border-radius: 4px;
 }
 .table_button
 {
@@ -119,13 +117,16 @@ table td
     display: inline-block;    
     float:left;
     text-align: left;
-    width: 120px;
-    padding: 5% 0;  
+    padding: 1px;  
+}
+.page_selector_left a
+{ 
+    display:inline-block;
+    margin-right: 60px;
 }
 .page_selector_left img
 {
-    margin-left: 10px;
-    margin-right: 50px;
+    vertical-align:middle;  
 }
 .page_selector_center
 {
@@ -139,31 +140,21 @@ table td
     display: inline-block;
     text-align: right;
     float:right;
-    width: 120px;
-    padding: 5% 0;  
+    padding: 1px;  
+}
+.page_selector_right a
+{ 
+    display:inline-block;
+    margin-left: 60px;
 }
 .page_selector_right img
 { 
-    margin-left: 50px;
-    margin-right: 10px;
+   vertical-align:middle;  
 }
 .table_input
 {
     text-align: center;
     width: 80px;
     border:1px solid #ccc; 
-    border-width:1px 1px 0 0; 
-}
-.cart
-{
-    text-align: center
-    width: 80px;
-    display: inline-block;    
-    color: #aaa;
-    background-color: #43b05c;
-    line-height: 60px;
-    padding: 0 24px;
-	text-decoration: none;
-    transition: all 0.2s;
-    list-style-type: none;
+    border-radius: 4px;
 }

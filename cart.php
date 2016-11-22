@@ -54,6 +54,18 @@
                     echo '</table>';
                     echo '<div>';
                     
+                    $sql = "SELECT * FROM deliverytypes;"; 
+                    
+                    echo '
+                    <form action="utility/tableHandler.php" method="POST">
+                    <label for="deliveryId">Select delivery type:</label><br>
+                    <select name="deliveryId">';
+                        foreach ($conn->query($sql) as $row) 
+                        {   
+                            echo '<option value='.$row['id'].'>'.$row['name'].'</option>';
+                        }
+                    echo '</select>
+                    <input type="submit" name="submit_save"/></form>';
                     echo '</div>';
                     
                  }

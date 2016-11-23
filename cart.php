@@ -29,7 +29,7 @@
                             echo "<h2>You got 1 Item in cart</h2>";
                          else
                             echo "<h2>You got ".$_SESSION['cart']." Items in cart</h2>";
-                     }
+                    
                     echo '<table class = "products" width="100%" >';
                     foreach ($conn->query($sql) as $row) 
                     {
@@ -67,6 +67,11 @@
                     echo '</select>
                     <input type="submit" name="submit_save"/></form>';
                     echo '</div>';
+                     }
+                    else
+                    {
+                        echo '<h1>You still got empty cart? Check out our products <a href="index.php">HERE</a></h1>';
+                    }
                     
                  }
                 catch(PDOException $error)

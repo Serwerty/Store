@@ -16,7 +16,6 @@ if (isset($_POST['submit_delete'])) {
             } 
 if (isset($_POST['submit_save'])) {
            SaveCart($_POST['deliveryId']);
-    echo "123";
             } 
         
 function PutInACart($id,$count)
@@ -81,13 +80,13 @@ function SaveCart($deliveryID)
                 
              $dateNow = date("Y-m-d H:i:s");
              $insertQuery = 'INSERT INTO Orders(date, user_id, delivery_type_id) VALUES("'.$dateNow.'",'.$_SESSION['user_id'].','.$deliveryID.')';
-             $getIdQuery = 'Select id from orders where data = "'.$dateNow.'"';
+             $getIdQuery = 'Select id from orders where date = "'.$dateNow.'"';
              $orederId;
-                echo $insertQuery;
              $conn->exec($insertQuery);
             
              foreach ($conn->query($getIdQuery) as $row) 
                  $orederId = $row['id'];
+                
             
              $sql = "SELECT * FROM juices;"; 
              foreach ($conn->query($sql) as $row) 
@@ -96,7 +95,7 @@ function SaveCart($deliveryID)
                 {
                     $insertQueryOrderJuice = 'INSERT INTO OrderJuice(order_id, juice_id, count_of_juice) VALUES('.$orederId.','.$row['id'].','.$_SESSION['productID'.$row['id']].')';
                     $conn->exec($insertQueryOrderJuice);
-                    echo $insertQueryOrderJuice;
+                    
                 }
              }
           }
@@ -108,7 +107,7 @@ function SaveCart($deliveryID)
                 
         }
     } 
-    //header('Location: ../index.php', true, $permanent ? 301 : 302);
-    //exit();
+    header('Location: ../index.php', true, $permanent ? 301 : 302);
+    exit();
 }
 ?>

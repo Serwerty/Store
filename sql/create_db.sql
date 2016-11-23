@@ -26,6 +26,7 @@ CREATE TABLE DeliveryTypes(
 	id INTEGER NOT NULL AUTO_INCREMENT,
     name VARCHAR(80) NOT NULL,
     price NUMERIC(15,2) NOT NULL,
+    description VARCHAR(512) NULL,
     PRIMARY KEY(id)    
 );
 

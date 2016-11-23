@@ -80,7 +80,7 @@
                      }
                     else
                     {
-                        echo '<h1>You still got empty cart? Check out our products <a href="index.php">HERE</a></h1>';
+                        echo '<div class="empty_cart_text"><h1>You still got empty cart? Check out our products <a href="index.php">HERE</a></h1></div>';
                     }
                     
                  }

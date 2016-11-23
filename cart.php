@@ -37,6 +37,16 @@
                       if (isset($_SESSION['productID'.$row['id']]))
                       {
                             echo '<tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Count</th>
+                                <th>Cost</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>';
+                            echo '<tr>
                                     <td class = "table_image"><img src = "'.$row['image_path'].'"/></td>
                                     <td>'.$row['name'].'</td>
                                     <td>'.$row['price'].'</td>

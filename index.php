@@ -57,8 +57,15 @@
                     $sql = "SELECT * FROM juices LIMIT ".($page-1) * $ITEMS_PER_PAGE.",".$page * $ITEMS_PER_PAGE.";";
                 
                     echo '<table class = "products" width="100%" >';
+                    echo '<tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Count</th>
+                                <th></th>
+                            </tr>'; 
                         foreach ($conn->query($sql) as $row) 
-                        {
+                        { 
                             echo '<tr>
                                     <td class = "table_image"><img src = "'.$row['image_path'].'"/></td>
                                     <td>'.$row['name'].'</td>

@@ -89,6 +89,7 @@ form
 }
 .products
 { 
+    padding-top: 10px;
     border-bottom: 1px solid black;
 }
 .table_image
@@ -100,6 +101,11 @@ table td
 {
     border:1px solid #ccc; 
     border-radius: 4px;
+}
+table th
+{
+   border:1px solid #ccc; 
+    border-radius: 4px; 
 }
 .table_button
 {

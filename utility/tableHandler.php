@@ -20,12 +20,12 @@ if (isset($_POST['submit_save'])) {
         
 function PutInACart($id,$count)
 {
-    if($count === NULL) $count = 1;
+    if($count=="") $count = 1;
     if (isset($_SESSION['user_id'])) 
     {
-        if (isset($_SESSION['cart'])) 
+        if (isset($_SESSION['cart']) && !isset($_SESSION['productID'.$id.''])) 
             $_SESSION['cart']++;
-        else
+        if (!isset($_SESSION['cart']))
             $_SESSION['cart']=1;
         
         if (isset($_SESSION['productID'.$id.'']))
@@ -56,8 +56,10 @@ function DeleteItemInCart($id)
     {
         if (isset($_SESSION['cart']))
         {
-            if($_SESSION['productID'.$id.'']>0)
-            $_SESSION['cart']--;
+            if($_SESSION['cart']>1)
+                $_SESSION['cart']--;
+            else
+                unset($_SESSION['cart']);   
         }
         if (isset($_SESSION['productID'.$id.'']))
             unset($_SESSION['productID'.$id.'']);

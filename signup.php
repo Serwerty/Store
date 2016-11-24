@@ -84,5 +84,10 @@
                <a href="signin.php">Already have an account? Sign In</a>
          </form>
       </div> 
+        <div class = "footer">
+            <?php
+            include ("includes/footer.php");
+            ?>
+        </div>
     </body>
 </html>

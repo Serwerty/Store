@@ -27,9 +27,9 @@
                      if (isset($_SESSION['cart']))
                      {
                          if ($_SESSION['cart'] == 1)
-                            echo "<h2>You got 1 Item in cart</h2>";
+                            echo "<h1>You got 1 Item in cart</h1>";
                          else
-                            echo "<h2>You got ".$_SESSION['cart']." Items in cart</h2>";
+                            echo "<h1>You got ".$_SESSION['cart']." Items in cart</h1>";
                     
                     echo '<table class = "products" width="100%" >';
                            echo '<tr>

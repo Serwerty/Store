@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-        <LINK href="css/main.css" rel="stylesheet" type="text/css">
+        <link href="css/main.css" rel="stylesheet" type="text/css">
 		<title>Sign In</title>
 	</head>
 	<body>
@@ -57,6 +57,11 @@
                <p><input type="submit" name= "signin" value="Sign In" /></p>
                <a href="signup.php">Don't have an account? Sign Up</a>
          </form>
-      </div> 
+      </div>
+        <div class = "footer">
+            <?php
+            include ("includes/footer.php");
+            ?>
+        </div>
     </body>
 </html>

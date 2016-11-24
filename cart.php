@@ -49,7 +49,7 @@
                       {
                             echo '<tr>
                                     <td class = "table_image"><img src = "'.$row['image_path'].'"/></td>
-                                    <td>'.$row['name'].'('.$row['manufacturer_name'].')</td>
+                                    <td>'.$row['name'].' ('.$row['manufacturer_name'].')</td>
                                     <td>'.$row['price'].'</td>
                                     <td>'.$_SESSION['productID'.$row['id']].'</td>
                                     <td>'.$row['price'] * $_SESSION['productID'.$row['id']].'</td>';

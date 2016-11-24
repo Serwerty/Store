@@ -100,12 +100,16 @@ function SaveCart($deliveryID)
                     
                 }
              }
+                
+            include("unSetCart.php");     
+            header('Location: ../orderSummary.php?orderId='.$orederId, true, $permanent ? 301 : 302);
+            exit();
           }
           catch(PDOException $error) 
           {
             echo "<p>Error: ".$error->getMessage()."</p>\n";
           }
-            include("unSetCart.php"); 
+            
                 
         }
     } 

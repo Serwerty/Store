@@ -224,7 +224,8 @@ footer
     min-height: 80px;
     color: #99979c;
     min-width: 1500px;
-    margin: 0;
+    margin-left: 1px;
+    margin-right: 1px;
     padding-top: 50px;
     padding-bottom: 50px;
 }

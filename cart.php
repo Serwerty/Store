@@ -31,12 +31,7 @@
                             echo "<h2>You got ".$_SESSION['cart']." Items in cart</h2>";
                     
                     echo '<table class = "products" width="100%" >';
-                    foreach ($conn->query($sql) as $row) 
-                    {
-                    
-                      if (isset($_SESSION['productID'.$row['id']]))
-                      {
-                            echo '<tr>
+                           echo '<tr>
                                 <th></th>
                                 <th>Name</th>
                                 <th>Price</th>
@@ -46,6 +41,11 @@
                                 <th></th>
                                 <th></th>
                             </tr>';
+                    foreach ($conn->query($sql) as $row) 
+                    {
+                    
+                      if (isset($_SESSION['productID'.$row['id']]))
+                      {
                             echo '<tr>
                                     <td class = "table_image"><img src = "'.$row['image_path'].'"/></td>
                                     <td>'.$row['name'].'</td>
@@ -69,13 +69,14 @@
                     echo '
                     <form action="utility/tableHandler.php" method="POST">
                     <label for="deliveryId">Select delivery type:</label><br>
-                    <select name="deliveryId">';
+                    <select name="deliveryId" >';
                         foreach ($conn->query($sql) as $row) 
                         {   
                             echo '<option value='.$row['id'].'>'.$row['name'].'</option>';
                         }
                     echo '</select>
-                    <input type="submit" name="submit_save"/></form>';
+                    <input type="submit" value="Proceed to Checkout" name="submit_save" /></form>';
+                    echo '<a href="index.php"><p style="padding-left: 20px;">Continue Shopping</p></a>' ;   
                     echo '</div>';
                      }
                     else

@@ -74,7 +74,10 @@ menu li:hover  a
 	line-height: 60px;
 	text-decoration: none;
 }
-
+select
+{
+    width:140px;
+}
 
 .content
 {
@@ -85,7 +88,7 @@ menu li:hover  a
 form
 {
     margin-top: 100px;
-    margin-left: 40px;    
+    margin-left: 20px;    
 }
 .products
 { 

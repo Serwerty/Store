@@ -1,7 +1,7 @@
 <?php
 function selectPage($page,$maxPage)
 {
-    $actual_link = "http://localhost/Store/index.php";
+    $actual_link = "https://jus-sante.herokuapp.com/index.php";
     
     echo '<div class = "page_selector">';
     echo '<div class = "page_selector_left">';

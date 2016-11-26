@@ -13,9 +13,9 @@
             include("includes/header.php");
             ?>
         </div>
-        <div style= "width: 100%; min-width: 1500px">
+        <!--<div style= "display: block; width: 90%; min-width: 90%; margin: auto">
             <img style="width: 100% " src="images/products.png"/>
-        </div>
+        </div>-->
         <div class = "content">
             <?php
             include ("includes/connect.php");

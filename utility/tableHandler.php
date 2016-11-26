@@ -43,7 +43,7 @@ function UpdateCart($id,$isAddButton)
     {
         if ($isAddButton)
             $_SESSION['productID'.$id.'']++;
-        else if ($_SESSION['productID'.$id.'']>0)
+        else if ($_SESSION['productID'.$id.'']>1)
             $_SESSION['productID'.$id.'']--;
     }
     header('Location: ../cart.php', true, $permanent ? 301 : 302);

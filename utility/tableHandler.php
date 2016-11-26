@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+		<title>Store</title>
+	</head>
+	<body>
 <?php
 ob_start();
 session_start();
@@ -117,3 +125,5 @@ function SaveCart($deliveryID)
     exit();
 }
 ?>
+         </body>
+</html>

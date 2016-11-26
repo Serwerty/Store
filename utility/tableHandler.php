@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-        <link href="css/main.css" rel="stylesheet" type="text/css">
-		<title>Store</title>
-	</head>
-	<body>
 <?php
 ob_start();
 session_start();
-
 if (isset($_POST['submit'])) {
            PutInACart($_POST['submit'],$_POST['count']);
             }      
@@ -51,7 +42,7 @@ function UpdateCart($id,$isAddButton)
     {
         if ($isAddButton)
             $_SESSION['productID'.$id.'']++;
-        else if ($_SESSION['productID'.$id.'']>)
+        else if ($_SESSION['productID'.$id.'']>1)
             $_SESSION['productID'.$id.'']--;
     }
     header('Location: ../cart.php', true, $permanent ? 301 : 302);
@@ -125,5 +116,3 @@ function SaveCart($deliveryID)
     exit();
 }
 ?>
-         </body>
-</html>

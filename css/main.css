@@ -1,5 +1,4 @@
 html {
-    display: table;
     margin: auto;
     margin-top: 0;
     font-family: sans-serif;
@@ -13,8 +12,8 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-    min-width: 100%;
-    display: table-cell;
+    min-width: 90%;
+    margin:0 50px;
     vertical-align: middle;
     min-height: 100%;
 }

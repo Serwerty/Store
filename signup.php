@@ -2,6 +2,7 @@
     <head>
 		<meta charset="utf-8">
         <LINK href="css/main.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="images/Icon.png">
 		<title>Sign Up</title>
 	</head>
 	<body>

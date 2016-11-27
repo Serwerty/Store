@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
         <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="images/Icon.png">
 		<title>Jus Santé</title>
 	</head>
 	<body>
@@ -39,6 +40,7 @@
                 if ($page <= 0)
                     $page = 1;
                 
+                echo "<h1>Produits</h1>";
                 GetTable($conn, $page);
                 
                 $stmt = $conn->prepare("SELECT COUNT(*) FROM juices;"); 

@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
         <LINK href="css/main.css" rel="stylesheet" type="text/css">
-		<title>Jus Santé</title>
+        <link rel="icon" href="images/Icon.png">
+        <title>Jus Santé</title>
 	</head>
 	<body>
         <div class="header">

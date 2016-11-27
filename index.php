@@ -39,14 +39,15 @@
                 $page =  @$_GET["page"];    
                 if ($page <= 0)
                     $page = 1;
-                
+           
                 echo "<h1>Produits</h1>";
                 GetTable($conn, $page);
                 
                 $stmt = $conn->prepare("SELECT COUNT(*) FROM juices;"); 
                 $stmt->execute(); 
                 $maxPage = $stmt->fetch()['COUNT(*)'] / $ITEMS_PER_PAGE;
-                
+                       if ($page > $maxPage)
+                    $page = $maxPage;
                 include ('utility/pageSelector.php');
                 selectPage($page,$maxPage);
             }

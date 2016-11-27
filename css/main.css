@@ -45,7 +45,7 @@ menu
 menu li
 {
     display: inline-block;    
-    color: #aaa;
+    color: #ccc;
     line-height: 60px;
     padding: 0 24px;
 	text-decoration: none;
@@ -56,6 +56,18 @@ menu li
 a
 {
     text-decoration: none;
+}
+.non_hover_li:hover
+{
+    display: inline-block;   
+    background-color: #43b05c;
+    color: #ccc;
+    line-height: 60px;
+    padding: 0 24px;
+	text-decoration: none;
+    transition: all 0.2s;
+    list-style-type: none;
+    font-size: 16pt;   
 }
 menu li:hover
 {

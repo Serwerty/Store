@@ -39,16 +39,16 @@
                  $error = "";
   
                  if (strlen($username) == 0) {
-                    $error = "Username can't be empty.";
+                    $error = "Nom ne doit pas être vide";
                  }
                  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    $error = "Email is invalid.";
+                    $error = "E-mail n'est pas valable.";
                  }
                  if (strlen($password) < 6 || $password != $confirm_password) {
-                    $error = "Passwords must be equal and length >= 6.";
+                    $error = "Mots de passe doivent être éguaux et longueur > 5.";
                  }
                  if (userExists($conn, $email)) {
-                    $error = "User with such email already exists.";
+                    $error = "Utilisateur avec cet e-mail existe déjà.";
                  }
   
                  if ($error == "") {
@@ -75,13 +75,14 @@
                  }
               }
            ?>
+         <h1>Signer</h1>
          <form action="signup.php" method="post">
-               <p><input type="text" name="username" size="40" maxlength="40" placeholder="Username" /></p>
+               <p><input type="text" name="username" size="40" maxlength="40" placeholder="Nom d'utilisateur" /></p>
                <p><input type="email" name="email" size="40" maxlength="40" placeholder="Email" /></p>
-               <p><input type="password" name="password" size="40" maxlength="40" placeholder="Password" /></p>
-               <p><input type="password" name="confirm_password" size="40" maxlength="40" placeholder="Confirm password" /></p>
-               <p><input type="submit" name="sign_up" value="Sign Up" /></p>
-               <a href="signin.php">Already have an account? Sign In</a>
+               <p><input type="password" name="password" size="40" maxlength="40" placeholder="Mot de passe" /></p>
+               <p><input type="password" name="confirm_password" size="40" maxlength="40" placeholder="Confirmer le mot de passe" /></p>
+               <p><input type="submit" name="sign_up" value="Signer" /></p>
+               <a href="signin.php">Avez-vous déjà un compte? Entrer</a>
          </form>
       </div> 
         <div class = "footer">

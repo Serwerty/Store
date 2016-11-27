@@ -1,10 +1,10 @@
 <?php
            
 $pages = array(
-'index.php' => 'Home',
-'about.php' => 'About Us',
-'delivery.php'  => 'Delivery Options',
-'cart.php'  => 'Cart'
+'index.php' => 'Accueil',
+'about.php' => 'A propos',
+'delivery.php'  => 'Options de livraison',
+'cart.php'  => 'Panier'
 );
 
    $pageName =  basename($_SERVER['PHP_SELF']);
@@ -39,8 +39,8 @@ foreach ($pages as $key => $value)
         
         else
         {
-            echo "<li class = \"user_container\">Welcome, ".$_SESSION['username']."!</li>";
-            echo "<li><a href=\"includes/logout.php\"> Logout</a></li>";
+            echo "<li class = \"user_container\">Bienvenu, ".$_SESSION['username']."!</li>";
+            echo "<li><a href=\"includes/logout.php\">Se déconnecter</a></li>";
         }
 	}  
 else 

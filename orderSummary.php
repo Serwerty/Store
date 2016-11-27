@@ -34,8 +34,8 @@
                     {
                         if ($order['user_id'] == $_SESSION['user_id'])
                         {
-                        echo '<h1>Your Order #'.$order['id'].' has been successfully placed</h1>';
-                        echo '<strong>Order Data : </strong>'.$order['date'].'<br>';
+                        echo '<h1>Votre commande #'.$order['id'].' a été placée avec succès</h1>';
+                        echo '<strong>Données de commande: </strong>'.$order['date'].'<br>';
                             
                         $sql = 'SELECT juices.name, juices.price, juices.image_path, manufacturers.name as manufacturer_name, orderjuice.count_of_juice from juices, manufacturers, orderjuice
                         WHERE juices.id = orderjuice.juice_id and manufacturers.id = juices.manufacturer_id and orderjuice.order_id = '.$order['id'].';';
@@ -43,10 +43,10 @@
                         echo '<table class = "products" width="100%" >';
                         echo '<tr>
                                 <th></th>
-                                <th>Name (Manufacturer)</th>
-                                <th>Price</th>
-                                <th>Count</th>
-                                <th>Cost</th>
+                                <th>Nom (Fabricant)</th>
+                                <th>Prix</th>
+                                <th>Compter</th>
+                                <th>Sous-Total</th>
                             </tr>';
                         $totalCost = 0;
                         foreach ($conn->query($sql) as $row) 
@@ -56,25 +56,25 @@
                             echo '<tr>
                                         <td class = "table_image"><img src = "'.$row['image_path'].'"/></td>
                                         <td>'.$row['name'].' ('.$row['manufacturer_name'].')</td>
-                                        <td>'.$row['price'].'</td>
+                                        <td>$'.$row['price'].'</td>
                                         <td>'.$row['count_of_juice'].'</td>
-                                        <td>'.$cost.'</td></tr>';   
+                                        <td>$'.$cost.'</td></tr>';   
                         }
                         echo '</table>';
                         
-                        echo '<strong>Delivery Type: </strong>'.$order['name'].'<br>';
-                        echo '<strong>Delivery Price: </strong>'.$order['price'].'<br>';
+                        echo '<strong>Type de livraison: </strong>'.$order['name'].'<br>';
+                        echo '<strong>Prix de livraison: </strong>'.$order['price'].'<br>';
                         $totalCost += $order['price'];
-                        echo '<h2>Total Cost: '.$totalCost.'</h2>';
+                        echo '<h2>Prix total: $'.$totalCost.'</h2>';
                         }
                         else
                         {
-                            echo '<h1>Order with this number doesn\'t belong to you.</h1>';
+                            echo '<h1>L\'ordre avec ce numéro ne vous appartient pas.</h1>';
                         }
                     }
                     else
                     {
-                     echo '<h1>Order with this number doesn\'t exist.</h1>';   
+                     echo '<h1>L\'ordre avec ce numéro n\'existe pas.</h1>';   
                     }
                 }
                 catch(PDOException $error) 

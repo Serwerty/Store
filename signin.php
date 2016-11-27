@@ -35,7 +35,7 @@
                   startSessionForUser($row['id'], $row['username'], $row['email']);
                   header('Location: '.'index.php', true, $permanent ? 301 : 302);
                } else {
-                  header('Location: '.'error.php?error=User credentials are invalid.', true, $permanent ? 301 : 302);
+                  header('Location: '.'error.php?error=Les informations d\'identification de l\'utilisateur ne sont pas valides.', true, $permanent ? 301 : 302);
                }
                exit();
             }
@@ -51,11 +51,12 @@
                }
             }
          ?>
+        <h1>Entrer</h1>
          <form action="signin.php" method="post">
                <p><input type="email" name="email" size="40" maxlength="40" placeholder="Email" /></p>
-               <p><input type="password" name="password" size="40" maxlength="40" placeholder="Password" /></p>
-               <p><input type="submit" name= "signin" value="Sign In" /></p>
-               <a href="signup.php">Don't have an account? Sign Up</a>
+               <p><input type="password" name="password" size="40" maxlength="40" placeholder="Mot de passe" /></p>
+               <p><input type="submit" name= "signin" value="Entrer" /></p>
+               <a href="signup.php">Vous n'avez pas encore de compte? Signer</a>
          </form>
       </div>
         <div class = "footer">

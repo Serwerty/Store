@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
         <LINK href="css/main.css" rel="stylesheet" type="text/css">
-		<title>Store</title>
+		<title>Jus Santé</title>
 	</head>
 	<body>
         <div class="header">
@@ -27,7 +27,7 @@
                 
                 $sql = "Select * from deliverytypes";
                 
-                echo '<h1>We got '.$deliveryCount.' types of delivery:</h1>';
+                echo '<h1>Nous avons obtenu '.$deliveryCount.' types de livraison:</h1>';
                 echo '<div class="deliveries_table">';
                
                 foreach ($conn->query($sql) as $row)

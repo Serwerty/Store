@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
         <link href="css/main.css" rel="stylesheet" type="text/css">
-		<title>Store</title>
+		<title>Jus Santé</title>
 	</head>
 	<body>
         <div class="header">
@@ -63,9 +63,9 @@ where juices.manufacturer_id = manufacturers.id LIMIT ".($page-1) * $ITEMS_PER_P
                     echo '<table class = "products" width="100%" >';
                     echo '<tr>
                                 <th></th>
-                                <th>Name (Manufacturer)</th>
-                                <th>Price</th>
-                                <th>Count</th>
+                                <th>Nom (Fabricant)</th>
+                                <th>Prix</th>
+                                <th>Compter</th>
                                 <th></th>
                             </tr>'; 
                         foreach ($conn->query($sql) as $row) 
@@ -73,7 +73,7 @@ where juices.manufacturer_id = manufacturers.id LIMIT ".($page-1) * $ITEMS_PER_P
                             echo '<tr>
                                     <td class = "table_image"><img src = "'.$row['image_path'].'"/></td>
                                     <td>'.$row['name'].' ('.$row['manufacturer_name'].')</td>
-                                    <td>'.$row['price'].'</td>';
+                                    <td>$'.$row['price'].'</td>';
                             echo '<form action="utility/tableHandler.php" method="post">
                                     <td class = "table_input"><input type="number" name="count" size="60" min="1" max="100" title="Title" /></td>
                                     <td class = "table_image">

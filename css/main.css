@@ -60,7 +60,7 @@ menu li
 }
 a
 {
-    text-decoration: none;  
+    text-decoration: none;
 }
 menu li:hover
 {
@@ -76,6 +76,11 @@ menu li:hover
 menu li:hover  a
 {
    color: #ddd;  
+}
+menu a 
+{
+    display: block;
+    padding: 0;
 }
 .selected
 {

@@ -27,21 +27,16 @@ body {
 }
 .user_container
 {
-   text-align: right;
-   min-width: 30%;
-   color: #077c22;
-}
-.user_container:hover
-{
-   text-align: right;
-   min-width: 30%;
-   background-color: #43b05c;
-   color: #077c22;
+    display: inline-block; 
+    text-align: right;
+    float: right;
+    color: #077c22;
+    margin-right: 70px;
 }
 menu
 {
 	color: #888;
-	display: inline-block;
+    display: inline-block;
 	overflow: hidden;
 	width: 100%; 
     min-width: 1200px;

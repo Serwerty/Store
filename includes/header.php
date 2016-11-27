@@ -39,8 +39,10 @@ foreach ($pages as $key => $value)
         
         else
         {
-            echo "<li class = \"user_container\">Bienvenu, ".$_SESSION['username']."!</li>";
+            echo "<div class =  \"user_container\">";
+            echo "<li>Bienvenu, ".$_SESSION['username']."!</li>";
             echo "<li><a href=\"includes/logout.php\">Se déconnecter</a></li>";
+            echo "</div>";
         }
 	}  
 else 

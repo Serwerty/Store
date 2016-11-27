@@ -20,6 +20,9 @@
             {
                 $conn = new PDO("mysql:host=$host;dbname=$dbname", $login, $password);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $conn->exec("SET NAMES utf8");
+                $conn->exec("SET CHARACTER SET utf8");
+              
                 
                 $stmt = $conn->prepare("SELECT COUNT(*) FROM deliverytypes;"); 
                 $stmt->execute(); 

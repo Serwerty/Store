@@ -58,11 +58,10 @@
             
             function GetTable($conn,$page)
             {
-                $i = 0;
                 global $ITEMS_PER_PAGE;
                 
                     $sql = "Select juices.id, juices.name, juices.price, juices.image_path, manufacturers.name as manufacturer_name from juices, manufacturers 
-where juices.manufacturer_id = manufacturers.id LIMIT ".($page-1) * $ITEMS_PER_PAGE.",".$page * $ITEMS_PER_PAGE.";";
+                    where juices.manufacturer_id = manufacturers.id LIMIT ".($page-1) * $ITEMS_PER_PAGE.",".$ITEMS_PER_PAGE.";";
                 
                     echo '<table class = "products" width="100%" >';
                     echo '<tr>
@@ -85,8 +84,6 @@ where juices.manufacturer_id = manufacturers.id LIMIT ".($page-1) * $ITEMS_PER_P
                                    </td>';
                             echo '</form>
                                 </tr>';
-                           
-                                $i++;
                         }
                     echo '</table>';
             }

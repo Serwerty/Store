@@ -18,3 +18,13 @@ Insert into juices values (17, "Lychee juice", 7.00, 2, "images/default_juice.pn
 Insert into juices values (18, "Strawberry juice", 5.50, 2, "images/default_juice.png");
 Insert into juices values (19, "Tomato juice", 5.00, 2, "images/default_juice.png");
 Insert into juices values (20, "Carrot juice", 5.00, 2, "images/default_juice.png");
+Insert into juices values (21, "Apple juice", 6.00, 3, "images/default_juice.png");
+Insert into juices values (22, "Orange juice", 6.00, 3, "images/default_juice.png");
+Insert into juices values (23, "Mango juice", 7.00, 3, "images/default_juice.png");
+Insert into juices values (24, "Lime juice", 6.50, 3, "images/default_juice.png");
+Insert into juices values (25, "Lemon juice", 5.50, 3, "images/default_juice.png");
+Insert into juices values (26, "Cherry juice", 5.50, 3, "images/default_juice.png");
+Insert into juices values (27, "Lychee juice", 7.50, 3, "images/default_juice.png");
+Insert into juices values (28, "Strawberry juice", 6.00, 3, "images/default_juice.png");
+Insert into juices values (29, "Tomato juice", 5.50, 3, "images/default_juice.png");
+Insert into juices values (30, "Carrot juice", 5.50, 3, "images/default_juice.png");

@@ -30,7 +30,7 @@
                          if ($_SESSION['cart'] == 1)
                             echo "<h1>Vous avez un article dans votre panier</h1>";
                          else
-                            echo "<h1>Vous avez ".$_SESSION['cart']."articles dans votre panier</h1>";
+                            echo "<h1>Vous avez ".$_SESSION['cart']." articles dans votre panier</h1>";
                     
                     echo '<table class = "products" width="100%" >';
                            echo '<tr>

@@ -56,9 +56,7 @@
             {
                 $i = 0;
                 global $ITEMS_PER_PAGE;
-                $page =  @$_GET["page"];    
-                if ($page <= 0)
-                    $page = 1;
+                global $page;
                 
                     $sql = "Select juices.id, juices.name, juices.price, juices.image_path, manufacturers.name as manufacturer_name from juices, manufacturers 
 where juices.manufacturer_id = manufacturers.id LIMIT ".($page-1) * $ITEMS_PER_PAGE.",".$page * $ITEMS_PER_PAGE.";";

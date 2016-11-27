@@ -1,7 +1,7 @@
 <?php
 function selectPage($page,$maxPage)
 {
-    if (&page>$maxPage)
+    if ($page > $maxPage)
         $page=&maxPage;
     $actual_link = "https://jus-sante.herokuapp.com/index.php";
     
